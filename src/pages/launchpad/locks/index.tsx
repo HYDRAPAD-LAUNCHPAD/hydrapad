@@ -2,6 +2,7 @@ import { useState } from "react";
 import LockToken from "./LockToken";
 import Preview from "./Preview";
 import Pagination from '@/components/common/Pagination'
+import { IconDots } from "@tabler/icons-react";
 
 const Locks: React.FC = () => {
   const [enabled, setEnabled] = useState(false);
@@ -15,11 +16,17 @@ const Locks: React.FC = () => {
       {!enabled ?
         <div className="py-10 px-5 flex flex-col gap-10">
           <div className="flex justify-between items-center">
+            <span className="py-1 px-10 bg-orange border-b border-white">Locks</span>
+            <span>All Networks</span>
+          </div>
+          <div className="flex justify-between items-center">
             <span>Assets</span>
             <div className="flex items-center gap-3">
               <button className="bg-grey1 py-2 px-3 rounded-md">BY APP</button>
               <button className="bg-grey1 py-2 px-3 rounded-md">BY TOKEN</button>
-              <button className="bg-grey1 py-2 px-3 rounded-md">...</button>
+              <button className="bg-grey1 py-2 px-3 rounded-md">
+                <IconDots />
+              </button>
             </div>
           </div>
           <button className="flex justify-center items-center px-10 gap-3 w-fit bg-grey2" onClick={handleNext}>

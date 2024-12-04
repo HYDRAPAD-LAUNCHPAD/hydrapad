@@ -87,7 +87,7 @@ const LinkText: React.FC<LinkTextProp> = ({ title, url }) => {
   const route = useLocation();
   return (
     <Link to={url}>
-      <li className={clsx("flex justify-center items-center gap-2 my-2 p-3 font-primary text-[16px] border border-white rounded-md", route.pathname.split("/")[1] === url.split("/")[1] && "gradient-text")}>
+      <li className={clsx("flex items-center gap-2 my-2 p-3 pl-7 font-primary text-[16px] border border-white rounded-md", route.pathname.split("/")[1] === url.split("/")[1] && "gradient-text")}>
         {title === "All Presales" && <img src="/assets/icons/apps.svg" alt="" width="24" height="24" />}
         <span>{title}</span>
       </li>
