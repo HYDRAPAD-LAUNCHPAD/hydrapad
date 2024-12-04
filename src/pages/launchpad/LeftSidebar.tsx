@@ -11,19 +11,19 @@ interface listType {
 
 const listArrOne: listType[] = [
   { title: "All Presales", url: "/" },
-  { title: "Create Token", url: "/create-token" },
+  { title: "➕ Create Token", url: "/create-token" },
 ];
 
 const listArrTwo: listType[] = [
-  { title: "Create Presale", url: "/create-regular-presale" },
-  { title: "Manage Presale", url: "/manage-presale" },
-  { title: "Lock", url: "/locks" },
-  { title: "Portfolio", url: "/my-portfolio/tokens" },
-  { title: "Airdrop", url: "/create-airdrop" },
+  { title: "➕ Create Presale", url: "/create-regular-presale" },
+  { title: "⚙️ Manage Presale", url: "/manage-presale" },
+  { title: "🔐 Lock", url: "/locks" },
+  { title: "📈 Portfolio", url: "/my-portfolio/tokens" },
+  { title: "🍭 Airdrop", url: "/create-airdrop" },
 ];
 
 const listArrThree: listType[] = [
-  { title: "Contact Us", url: "/contact-us" },
+  { title: "📩 Contact Us", url: "/contact-us" },
   // { title: "Doc", url: "/doc" },
   // { title: "Apply For Audit", url: "/apply-for-audit" },
   // { title: "Market Makers", url: "/market-makers" },
@@ -88,7 +88,7 @@ const LinkText: React.FC<LinkTextProp> = ({ title, url }) => {
   return (
     <Link to={url}>
       <li className={clsx("flex justify-center items-center gap-2 my-2 p-3 font-primary text-[16px] border border-white rounded-md", route.pathname.split("/")[1] === url.split("/")[1] && "gradient-text")}>
-        <img src="/assets/images/HYD.png" alt="" width="24" height="24" />
+        {title === "All Presales" && <img src="/assets/icons/apps.svg" alt="" width="24" height="24" />}
         <span>{title}</span>
       </li>
     </Link>

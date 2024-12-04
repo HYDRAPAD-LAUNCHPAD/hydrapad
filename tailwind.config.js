@@ -18,6 +18,9 @@ module.exports = withMT({
         textDark: "#797979",
         pink: "#a349a4",
         green1: "#089981",
+        grey1: "#212121",
+        grey2: "#211e2c",
+        grey3: "#353539",
       },
       boxShadow: {
         defaultShadow: "0 0 5px white"
