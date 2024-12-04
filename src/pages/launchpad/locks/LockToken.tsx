@@ -2,7 +2,10 @@ import CustomInput from "@/components/common/CustomInput";
 import CustomSelect from "@/components/common/CustomSelect";
 import GradientButton from "@/components/common/GradientButton";
 import LabelText from "@/components/common/LabelText";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+import { useWriteContract } from "wagmi";
+import abi from "./ABI.json";
+import { formatEther, parseEther } from "viem";
 
 const lockDurationOptions: { title: string, value: string }[] = [
   { title: "3 months", value: '3m' },
@@ -17,23 +20,47 @@ interface LockTokenProps {
 }
 
 const LockToken: React.FC<LockTokenProps> = ({ setEnabled }) => {
+  const [_token, _setToken] = useState("0xFab16528423959119Fb29270efF3F7752Ed2F063");
+  const [_amount, _setAmount] = useState("");
+  const [_lockDuration, _setLockDuration] = useState("");
+  const { writeContract } = useWriteContract();
+
+  const createLock = async () => {
+    let _tmpLockDuration;
+    if (_lockDuration === "3m") _tmpLockDuration = 3 * 30 * 24 * 3600
+    if (_lockDuration === "6m") _tmpLockDuration = 6 * 30 * 24 * 3600
+    if (_lockDuration === "1y") _tmpLockDuration = 12 * 30 * 24 * 3600
+    if (_lockDuration === "1.5y") _tmpLockDuration = 18 * 30 * 24 * 3600
+    if (_lockDuration === "2y") _tmpLockDuration = 24 * 30 * 24 * 3600
+    console.log(_token, _amount, _tmpLockDuration)
+    await writeContract({
+      abi,
+      address: "0xc65b8b8c23fe8a94967650c5f8310494725eceb3",
+      functionName: "createLock",
+      args: [
+        _token,
+        parseEther(_amount.toString()),
+        _tmpLockDuration
+      ],
+    })
+  }
 
   return (
     <div className="w-full md:w-1/2 mb-10 md:mb-0 px-8">
       <h5 className="mb-6">LOCK TOKEN</h5>
       <div className="mb-5">
         <LabelText>Token Contract Address</LabelText>
-        <CustomInput placeholder="Enter Token contract address" />
+        <CustomInput placeholder="Enter Token contract address" value={_token} onChange={e => _setToken(e.target.value)} />
       </div>
       <div className="mb-10 mt-5">
         <LabelText>Token Lock amount</LabelText>
-        <CustomInput placeholder="Enter lock amount" type="number" min={0} />
-        </div>
+        <CustomInput placeholder="Enter lock amount" type="number" min={0} value={_amount} onChange={e => _setAmount(e.target.value)} />
+      </div>
       <div className="mb-10 mt-5">
         <LabelText>Choose Lock Duration</LabelText>
-        <CustomSelect options={lockDurationOptions} label="Select lock duration" />
+        <CustomSelect options={lockDurationOptions} label="Select lock duration" value={_lockDuration} onChange={e => _setLockDuration(e as string)} />
       </div>
-      <GradientButton className="w-full rounded-lg mb-4">Create Lock</GradientButton>
+      <GradientButton className="w-full rounded-lg mb-4" onClick={createLock}>Create Lock</GradientButton>
       <button className="px-5 py-2 w-full rounded-lg bg-borderColor mb-8" onClick={() => setEnabled(false)}>Back</button>
     </div>
   )

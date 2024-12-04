@@ -1,6 +1,6 @@
 import CustomInput from "@/components/common/CustomInput";
 import CustomTextarea from "@/components/common/CustomTextarea";
-import GradientButton from "@/components/common/GradientButton";
+// import GradientButton from "@/components/common/GradientButton";
 import LabelText from "@/components/common/LabelText";
 
 const ContactUs: React.FC = () => {
@@ -33,7 +33,10 @@ const ContactUs: React.FC = () => {
           <CustomTextarea placeholder="Write Your Message" />
         </div>
         <div className="w-full flex justify-center">
-          <GradientButton className="px-[30px] rounded-lg">SUBMIT</GradientButton>
+          {/* <GradientButton className="px-[30px] rounded-lg">SUBMIT</GradientButton> */}
+          <button className='px-[30px] py-2 bg-green-500 text-white rounded-lg'>
+            SUBMIT
+          </button>
         </div>
       </div>
     </div>

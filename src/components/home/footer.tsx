@@ -51,7 +51,7 @@ export default function Footer () {
             </div>
             <div className='lg:flex block justify-between items-center lg:mb-12'>
               <div className='flex justify-center gap-6 flex-wrap pl-1 lg:mb-0 mb-6'>
-                <Link className='py-1 px-10 text-white text-lg relative cursor-pointer hover:text-opacity-60 duration-200 inline-block' to="/doc">
+                {/* <Link className='py-1 px-10 text-white text-lg relative cursor-pointer hover:text-opacity-60 duration-200 inline-block' to="/doc">
                   Doc
                   <span className='absolute -top-1 left-1 w-full h-[1px] bg-borderColor' />
                   <span className='absolute bottom-1 -right-1 w-[1px] h-full bg-borderColor' />
@@ -92,7 +92,7 @@ export default function Footer () {
                   <span className='absolute -bottom-1 -left-1 w-[1px] h-3/4 bg-borderColor' />
                   <span className='absolute top-0 -translate-y-1/2 left-0 w-[1px] h-[0.707rem] rotate-45 bg-borderColor' />
                   <span className='absolute bottom-0 translate-y-1/2 right-0 w-[1px] h-[0.707rem] rotate-45 bg-borderColor' />
-                </span>
+                </span> */}
               </div>
               <div className='flex justify-center gap-4 lg:mb-0 mb-6'>
                 <Link to='https://x.com/White_Hat_DAO' target='_blank'>

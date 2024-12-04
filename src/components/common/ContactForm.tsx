@@ -2,7 +2,7 @@ import React from 'react'
 import LabelText from './LabelText'
 import CustomInput from './CustomInput'
 import CustomTextarea from './CustomTextarea'
-import GradientButton from './GradientButton'
+// import GradientButton from './GradientButton'
 
 const ContactForm: React.FC = () => {
   return (
@@ -29,7 +29,9 @@ const ContactForm: React.FC = () => {
         <CustomTextarea placeholder='Write Your Message' />
       </div>
       <div className='w-full flex justify-center'>
-        <GradientButton className='px-[30px] rounded-lg'>SUBMIT</GradientButton>
+        <button className='px-[30px] py-2 bg-green-500 text-white rounded-lg'>
+          SUBMIT
+        </button>
       </div>
     </div>
   )
