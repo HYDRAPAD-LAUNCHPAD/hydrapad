@@ -9,7 +9,7 @@ interface LeftSidebarProps {
   isRegular?: string | undefined;
 }
 
-const LeftSidebar: React.FC<LeftSidebarProps> = ({isRegular}) => {
+const LeftSidebar: React.FC<LeftSidebarProps> = () => {
   return (
     <div className='py-8 border-r pt-[90px] border-r-borderColor relative'>
       <h5 className='bg-[#222227] p-3 text-center'>dogwifhat</h5>
@@ -31,7 +31,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({isRegular}) => {
           </Link>
           <GlobalSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />
         </div>
-        <Button className='bg-[#475DC0] px-16'>Promote</Button>
+        <Button className='bg-[#475DC0] px-16' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Promote</Button>
         <div
           className='my-4 rounded-lg p-4'
           style={{

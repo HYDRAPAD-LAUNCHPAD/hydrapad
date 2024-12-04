@@ -30,13 +30,13 @@ const Categories: React.FC<PropsType> = ({ tab, setTab }) => {
       <TabsHeader
         className="rounded-none bg-transparent p-0"
         indicatorProps={{
-          className:
-            "bg-transparent border-b border-white shadow-none rounded-none",
+          className: "bg-transparent border-b border-white shadow-none rounded-none",
         }}
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
       >
         {
           options.map((item: optionsType) => (
-            <Tab key={item.value} value={item.value} className="text-white py-3">
+            <Tab key={item.value} value={item.value} className="text-white py-3" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <div className="flex items-center text-[13px]">{item.icon}{item.title}</div>
             </Tab>
           ))

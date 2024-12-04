@@ -18,18 +18,18 @@ const Transactions: React.FC = () => {
         <TabsHeader
           className="rounded-none bg-transparent p-0 w-[400px]"
           indicatorProps={{
-            className:
-              "bg-transparent border-b border-white shadow-none rounded-none",
+            className: "bg-transparent border-b border-white shadow-none rounded-none",
           }}
+          placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
         >
-          <Tab value="1">
+          <Tab value="1" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="flex items-center py-1">
               <TransactionsSvg className="w-[20px] mr-1" />
               Transactions
 
             </div>
           </Tab>
-          <Tab value="2">
+          <Tab value="2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="flex items-center py-1">
               <IconMessage className="w-[20px] mr-1" />
               Comments

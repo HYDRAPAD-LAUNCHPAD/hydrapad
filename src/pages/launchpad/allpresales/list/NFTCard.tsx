@@ -37,9 +37,9 @@ const NFTCard: React.FC<NFTCardType> = props => {
     <Card
       className='w-full overflow-hidden bg-lightColor rounded-[15px] mb-14 hover:shadow-md hover:shadow-gray-700 cursor-pointer'
       style={{ transition: '0.3s' }}
-      onClick={handleClick}
+      onClick={handleClick} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
     >
-      <CardBody className='p-5 pb-0'>
+      <CardBody className='p-5 pb-0' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <div className='flex justify-between'>
           <div className='flex items-center text-white'>
             <div
@@ -90,7 +90,7 @@ const NFTCard: React.FC<NFTCardType> = props => {
             style={{ backgroundColor: '#99999940' }}
             value={80}
             variant='gradient'
-            className='my-1'
+            className='my-1' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           />
           <div className='flex justify-between text-[12px]'>
             <span>2100 SOL</span>
@@ -107,7 +107,7 @@ const NFTCard: React.FC<NFTCardType> = props => {
           </p>
         </div>
       </CardBody>
-      <CardFooter className='flex items-center justify-between px-5 pb-3 pt-4'>
+      <CardFooter className='flex items-center justify-between px-5 pb-3 pt-4' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <div className='flex items-center'>
           <IconWorld color='#919EAB' className='cursor-pointer w-[16px] mx-1' />
           <IconSend color='#919EAB' className='cursor-pointer w-[16px] mx-1' />

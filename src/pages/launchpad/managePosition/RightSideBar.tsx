@@ -45,7 +45,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isRegular }) => {
           <span>APE</span>
         </div>
         <div className='w-full px-5 mb-3 border-r border-l border-borderColor'>
-          <Button fullWidth color='green'>
+          <Button fullWidth color='green' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             {isRegular === "1" ? "BUY" : "SWAP"}
           </Button>
         </div>
@@ -61,7 +61,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isRegular }) => {
                 style={{ backgroundColor: '#99999940' }}
                 value={80}
                 variant='gradient'
-                className='h-4'
+                className='h-4' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
               />
             </div>
           }
@@ -92,7 +92,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isRegular }) => {
                     <p className='text-[12px]'>0</p>
                   </div>
                 </div>
-                <Progress color='green' value={100} />
+                <Progress color='green' value={100} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
               </div>
               <div className=''>
                 <div className='flex justify-between'>
@@ -142,7 +142,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isRegular }) => {
                 style={{ backgroundColor: '#99999940' }}
                 value={80}
                 variant='gradient'
-                className='h-4'
+                className='h-4' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
               />
             </>
           }

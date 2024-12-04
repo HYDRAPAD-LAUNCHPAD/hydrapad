@@ -9,14 +9,13 @@ interface PropsType extends Omit<InputProps, 'ref'> {
 const CustomInput = React.forwardRef<HTMLInputElement, PropsType>(({ className, ...props }, ref) => {
   return (
     <Input 
-      ref={ref}
-      crossOrigin={'false'} 
-      labelProps={{ className: "content-none" }} 
-      containerProps={{ className }} 
-      className={clsx("placeholder:opacity-50 text-gray-500 border-none mb-3")} 
-      style={{ backgroundColor: "#211E2C" }} 
-      {...props} 
-    />
+      onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} ref={ref}
+      crossOrigin={'false'}
+      labelProps={{ className: "content-none" }}
+      containerProps={{ className }}
+      className={clsx("placeholder:opacity-50 text-gray-500 border-none mb-3")}
+      style={{ backgroundColor: "#211E2C" }}
+      {...props}    />
   )
 });
 

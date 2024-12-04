@@ -9,11 +9,11 @@ const Tokens: React.FC = () => {
       <div className="flex justify-between py-6">
         <h4 className="ml-2 md:ml-16">Assets</h4>
         <div className="flex">
-          <ButtonGroup>
-            <Button>By App</Button>
-            <Button className="ml-1 border-none">By Token</Button>
+          <ButtonGroup placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <Button placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>By App</Button>
+            <Button placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} className="ml-1 border-none">By Token</Button>
           </ButtonGroup>
-          <IconButton className="ml-3">
+          <IconButton className="ml-3" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <IconDots />
           </IconButton>
         </div>

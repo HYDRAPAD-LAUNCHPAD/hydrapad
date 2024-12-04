@@ -33,7 +33,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({isRegular}) => {
           </Link>
           <GlobalSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />
         </div>
-        <Button className='bg-[#475DC0] px-16'>Promote</Button>
+        <Button className='bg-[#475DC0] px-16' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Promote</Button>
         <div
           className='my-4 rounded-lg p-4'
           style={{

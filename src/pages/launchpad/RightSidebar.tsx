@@ -101,15 +101,16 @@ const RightSidebar: React.FC = () => {
           className:
             'bg-transparent border-b border-[#F97736] shadow-none rounded-none'
         }}
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
       >
-        <Tab value='trending' className='text-gray-600 py-3'>
+        <Tab value='trending' className='text-gray-600 py-3' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           Trending
         </Tab>
-        <Tab value='watchlist' className='text-gray-600 py-3'>
+        <Tab value='watchlist' className='text-gray-600 py-3' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           Watchlist
         </Tab>
       </TabsHeader>
-      <TabsBody>
+      <TabsBody placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <TabPanel value='trending' className='p-0'>
           <ContentList options={data} />
         </TabPanel>
@@ -124,7 +125,7 @@ const RightSidebar: React.FC = () => {
 const ContentList = ({ options }: { options: listType[] }) => {
   return (
     <>
-      <List className='my-2 p-0'>
+      <List className='my-2 p-0' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         {options.map((item: listType, index: number) => (
           <ListItem
             key={index}
@@ -132,8 +133,9 @@ const ContentList = ({ options }: { options: listType[] }) => {
               'group rounded-none py-1.5 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white',
               index % 2 === 1 && 'bg-[#101014]'
             )}
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           >
-            <ListItemPrefix>
+            <ListItemPrefix placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <img
                 src={item.image}
                 alt='prefix-image'
@@ -143,7 +145,7 @@ const ContentList = ({ options }: { options: listType[] }) => {
               />
             </ListItemPrefix>
             {item.title}
-            <ListItemSuffix>
+            <ListItemSuffix placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <div className='flex items-center'>
                 <span className='text-[10px] text-[#707070] mr-3'>
                   ${item.usd.toFixed(2)}

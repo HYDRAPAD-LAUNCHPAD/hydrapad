@@ -13,7 +13,7 @@ interface PropsType extends Omit<SelectProps, 'ref' | 'children'> {
 const CustomSelect = React.forwardRef<HTMLDivElement, PropsType>(({ options, ...props }, ref) => {
   return (
     <Select
-      ref={ref}
+      placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} ref={ref}
       variant="outlined"
       className={clsx("border-none rounded-lg px-3 bg-lighterColor")}
       labelProps={{

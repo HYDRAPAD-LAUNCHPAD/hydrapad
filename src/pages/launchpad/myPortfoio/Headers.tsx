@@ -17,16 +17,16 @@ const Headers: React.FC = () => {
   return (
     <div className="flex justify-between pr-10">
       <Tabs value={selected} onChange={handleChange} className="w-[400px] m-auto md:m-0">
-        <TabsHeader
+        <TabsHeader placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           className="rounded-none bg-transparent p-0 text-borderColor"
           indicatorProps={{
             className:
               "bg-transparent border-b border-white shadow-none rounded-none text-orange-500",
           }}
         >
-          <Tab activeClassName="active-orange" className="pb-2 text-gray-500" value="Token" onClick={handleNavigate("/tokens")}>Token</Tab>
-          <Tab activeClassName="active-orange" className="pb-2 text-gray-500" value="My Investments" onClick={handleNavigate("/my-investments")}>My Investments</Tab>
-          <Tab activeClassName="active-orange" className="pb-2 text-gray-500" value="History" onClick={handleNavigate("/history")}>History</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="Token" onClick={handleNavigate("/tokens")}>Token</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="My Investments" onClick={handleNavigate("/my-investments")}>My Investments</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="History" onClick={handleNavigate("/history")}>History</Tab>
         </TabsHeader>
       </Tabs>
       <h5 className="hidden md:block">All Networks</h5>

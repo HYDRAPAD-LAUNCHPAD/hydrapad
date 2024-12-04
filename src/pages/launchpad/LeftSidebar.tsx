@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import clsx from 'clsx';
-import TwitterSvg from "@/components/icons/twitter-svg";
-import TelegramSvg from "@/components/icons/Telegram-svg";
-import DiscordSvg from "@/components/icons/Discord-svg";
+// import TwitterSvg from "@/components/icons/twitter-svg";
+// import TelegramSvg from "@/components/icons/Telegram-svg";
+// import DiscordSvg from "@/components/icons/Discord-svg";
 
 interface listType {
   title: string;

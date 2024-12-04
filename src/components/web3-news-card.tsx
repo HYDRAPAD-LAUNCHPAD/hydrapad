@@ -18,7 +18,7 @@ const Web3NewsCard = () => {
                 </div>
                 <h4 className="h-14 text-[18px]">NFT Video Startup Glass Falls</h4>
                 <p className="h-24">The startup's founders say they're ending active development after two years.</p>
-                <Button>Learn More</Button>
+                <Button placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Learn More</Button>
             </div>
         </div>
     )

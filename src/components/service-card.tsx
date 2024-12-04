@@ -7,7 +7,7 @@ const ServiceCard = () => {
             <div className="p-2 text-center flex flex-col items-stretch">
                 <h4 className="h-16 text-[#346DA1] font-bold">SAFETY RATING</h4>
                 <p className="h-28">After review of your product, we provide a broad security score to allow consumers to make informed decisions about your product.</p>
-                <Button>Apply</Button>
+                <Button placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Apply</Button>
             </div>
         </div>
     )

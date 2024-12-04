@@ -1,7 +1,7 @@
 import {
   IconBrandDiscord,
-  IconBrandGithub,
-  IconBrandLinkedin,
+  // IconBrandGithub,
+  // IconBrandLinkedin,
   IconBrandTelegram,
   IconBrandTwitter
 } from '@tabler/icons-react'
@@ -137,7 +137,7 @@ export default function Footer () {
           © 2025 ALL RIGHTS RESERVED BY HYDRAPAD.COM
         </p>
       </ContainerBig>
-      <Dialog open={contactVisible} handler={handleOpenContact}>
+      <Dialog open={contactVisible} handler={handleOpenContact} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <ContactForm />
       </Dialog>
     </div>

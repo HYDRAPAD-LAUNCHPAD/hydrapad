@@ -15,7 +15,7 @@ const LeftDrawer:React.FC = () => {
       <button onClick={handleOpen} className='fixed left-0 top-[50%] border-2 border-green-500 z-[9999] bg-[#0000007a] hover:shadow-defaultShadow transition-all p-3 rounded-r-full'>
         <IconArrowRight />
       </button>
-      <Drawer open={open} onClose={handleOpen} className='bg-bgColor'>
+      <Drawer open={open} onClose={handleOpen} className='bg-bgColor' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <LeftSidebar />
       </Drawer>
     </div>

@@ -9,10 +9,10 @@ interface PropsType extends Omit<TextareaProps, 'ref'> {
 const CustomTextarea = React.forwardRef<HTMLDivElement, PropsType>(({ className, ...props }, ref) => {
   return (
     <Textarea
-      ref={ref}
-      labelProps={{className: "content-none"}}
+      onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} ref={ref}
+      labelProps={{ className: "content-none" }}
       className={clsx("placeholder:opacity-50 text-gray-500 border-none", className)}
-      style={{backgroundColor: "#211E2C"}}
+      style={{ backgroundColor: "#211E2C" }}
       {...props}
     />
   )
