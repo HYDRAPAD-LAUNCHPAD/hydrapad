@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: CASCADIA Code;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/assets/fonts/Cascadia.ttf) format("truetype");
+  font-display: block;
+}
+
+:root {
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: rgb(10, 9, 15);
+  color: rgb(239, 239, 229);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  font-family: CASCADIA Code, sans-serif !important;
+  color: lightgrey;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer!important;
+  background-color: #211e2c;
+}
+body {
+  margin: 0;
+  background-color: rgb(10, 9, 15);
+  overflow-x: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Violetsans, Arial, sans-serif;
+  color: white;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+
+
+/* custom */
+.cst-text-gradient {
+  font-family: Pilat Extended;
+  font-weight: 950;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #CC2D8F, #346DA1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.cst-footer-icon {
+  box-shadow: 0px 2px 2px 2px rgba(20, 23, 34, 0.699), 0px 3px 3px 3px rgba(18, 22, 34, 0.226);
+  transition: .3s;
+}
+
+.cst-footer-icon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 4px 3px rgba(20, 23, 34, 0.705), 0px 9px 5px 4px rgba(18, 22, 34, 0.418);
+}
+
+.cst-card-shadow {
+  box-shadow: #1c1a2fab 0px 1px 2px, #1c1a2fab 0px 2px 4px, #1c1a2fab 0px 4px 8px, #1c1a2fab 0px 8px 16px, #1c1a2fab 0px 16px 32px, #1c1a2fab 0px 32px 64px;
+}
+
+.cst-link-item-bg,
+.cst-link-item-bg-active {
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.cst-link-item-bg {
+  background-image: url('https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/6549081cc567736a0bc36f46_product-menu-bg.webp');
+}
+
+.cst-link-item-bg-active {
+  background-image: url('https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/654911540c925020ce09ce55_menu-active.webp');
+}
+
+.subscribe-btn {
+  background-image: url('https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/644920edd0560b68918741c2_btn-shape.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team-member-outline-bg {
+  background-image: url('https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/64534f12fbd92f3d36a20110_team-shape-2.svg');
+  background-size: 100% 100%;
+}
+.gradient-text {
+  background: linear-gradient(to right, #FB6443, #D5DF64 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content-none::before {
+  content: none!important;
+}
+.content-none::after {
+  content: none!important;
+}
+.orange-gradient {
+  background-image: linear-gradient(to right, #F6851B, #DF4938);
+}
+.active-orange {
+  color: orange!important;
+}

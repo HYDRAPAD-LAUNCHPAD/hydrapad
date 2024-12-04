@@ -1,0 +1,1 @@
+export const VITE_WALLET_PROJECT_ID = import.meta.env.VITE_WALLET_PROJECT_ID
