@@ -18,7 +18,7 @@ const ConnectWalletBtn = () => {
             <p>CONNECTING ...</p>
           </>
         ) : isConnected ? (
-          <p className="overflow-hidden text-ellipsis whitespace-nowrap w-[150px]">{address}</p>
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap w-[120px]">{address}</p>
         ) : (
           <>
             <IconDots />
