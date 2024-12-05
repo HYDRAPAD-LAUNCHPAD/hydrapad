@@ -5,7 +5,8 @@ import LabelText from "@/components/common/LabelText";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useWriteContract } from "wagmi";
 import abi from "./ABI.json";
-import { parseEther } from "viem";
+import ERC20Abi from "./ERC20.json";
+import { Address, parseEther } from "viem";
 
 const lockDurationOptions: { title: string, value: string }[] = [
   { title: "3 months", value: '3m' },
@@ -20,10 +21,10 @@ interface LockTokenProps {
 }
 
 const LockToken: React.FC<LockTokenProps> = ({ setEnabled }) => {
-  const [_token, _setToken] = useState("0xEE4Aa73F6F62FC4A9eE4dB351Babb194670c931A");
+  const [_token, _setToken] = useState("0x599777F03f97ce4c039689b197fF6542fd990fca");
   const [_amount, _setAmount] = useState("");
   const [_lockDuration, _setLockDuration] = useState("");
-  const { writeContract } = useWriteContract();
+  const { writeContractAsync } = useWriteContract();
 
   const createLock = async () => {
     let _tmpLockDuration;
@@ -33,16 +34,30 @@ const LockToken: React.FC<LockTokenProps> = ({ setEnabled }) => {
     if (_lockDuration === "1.5y") _tmpLockDuration = 18 * 30 * 24 * 3600
     if (_lockDuration === "2y") _tmpLockDuration = 24 * 30 * 24 * 3600
     console.log(_token, _amount, _tmpLockDuration)
-    await writeContract({
-      abi,
-      address: "0xc65b8b8c23fe8a94967650c5f8310494725eceb3",
-      functionName: "createLock",
-      args: [
-        _token,
-        parseEther(_amount.toString()),
-        _tmpLockDuration
-      ],
-    })
+    try {
+      // const data = await writeContractAsync({
+      //   abi: ERC20Abi,
+      //   address: _token as Address,
+      //   functionName: "approve",
+      //   args: [
+      //     "0xc65b8b8c23fe8a94967650c5f8310494725eceb3",
+      //     parseEther(_amount.toString()),
+      //   ],
+      // })
+      // if(data)
+        await writeContractAsync({
+          abi,
+          address: "0xc65b8b8c23fe8a94967650c5f8310494725eceb3",
+          functionName: "createLock",
+          args: [
+            _token,
+            parseEther(_amount.toString(),),
+            _tmpLockDuration
+          ],
+        })
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   return (

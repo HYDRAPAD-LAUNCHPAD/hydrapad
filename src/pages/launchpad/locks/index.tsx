@@ -3,8 +3,20 @@ import LockToken from "./LockToken";
 import Preview from "./Preview";
 import Pagination from '@/components/common/Pagination'
 import { IconDots } from "@tabler/icons-react";
+import { useAccount, useReadContract } from "wagmi";
+import abi from './ABI.json';
 
 const Locks: React.FC = () => {
+  const { address } = useAccount();
+  const { data } = useReadContract({
+    abi,
+    address: '0xc65b8b8c23fe8a94967650c5f8310494725eceb3',
+    functionName: 'getCreatorLocks',
+    args: [
+      address
+    ],
+  })
+  console.log("res", data)
   const [enabled, setEnabled] = useState(false);
 
   const handleNext = () => {
@@ -50,7 +62,41 @@ const Locks: React.FC = () => {
                       <div className='relative'>
                         <img className='absolute -top-[2px] rounded-full -left-[2px] w-[24px] h-[24px]' alt='' src="/assets/images/1027.png" />
                         <img
-                          src="/assets/images/1027.png"
+                          src="/assets/images/avatars/a.png"
+                          alt='avatar'
+                          className='mr-4 rounded-full min-w-[51px] h-[51px]'
+                        />
+                      </div>
+                      <div className='text-white'>
+                        <p className='text-[16px]'>DOGE</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="flex justify-center gap-2">
+                      <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
+                      <img src="/assets/icons/external.svg" />
+                    </div>
+                  </td>
+                  <td align="center">10/11/2024</td>
+                  <td align="center">6 Months</td>
+                  <td align="center">
+                    <div className="flex justify-center gap-2">
+                      <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
+                      <img src="/assets/icons/external.svg" />
+                    </div>
+                  </td>
+                  <td>
+                    <div className="p-2 bg-green-500 rounded-br-lg rounded-tr-lg">Unlock</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className='flex items-center my-4'>
+                      <div className='relative'>
+                        <img className='absolute -top-[2px] rounded-full -left-[2px] w-[24px] h-[24px]' alt='' src="/assets/images/1027.png" />
+                        <img
+                          src="/assets/images/avatars/a.png"
                           alt='avatar'
                           className='mr-4 rounded-full min-w-[51px] h-[51px]'
                         />

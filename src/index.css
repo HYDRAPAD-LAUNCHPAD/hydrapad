@@ -166,4 +166,5 @@ h6 {
 
 #locks-table td {
   padding: 0 16px;
+  white-space: nowrap;
 }
