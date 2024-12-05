@@ -8,7 +8,7 @@ const ConnectWalletBtn = () => {
 
   return (
     <span
-      className="inline-block p-2 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0"
+      className="inline-block p-1 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0 h-fit"
       onClick={() => open()}
     >
       <div className="bg-[#0A090F] h-min w-max flex gap-2 justify-between items-center px-2">

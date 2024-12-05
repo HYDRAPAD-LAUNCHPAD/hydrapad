@@ -10,14 +10,14 @@ const ConnectWalletBtn = () => {
 
   return (
     <span
-      className="inline-block p-2 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0"
+      className="inline-block p-1 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0 h-fit"
       onClick={() => setOpenMenu(!openMenu)}
     >
       <div className="bg-[#0A090F] h-min w-max flex gap-2 justify-between items-center px-2">
         <p className="flex items-center gap-4 shrink-text">
           {chains.some(x => x.id === chainId) ?
             <>
-              <img src={`/assets/images/chains/${chains.findIndex(x => x.id === chainId) + 1}.png`} width="30" height="30" />
+              <img src={`/assets/images/chains/${chains.findIndex(x => x.id === chainId) + 1}.png`} width="20" height="20" />
               <span>{chains.find(x => x.id === chainId)?.name}</span>
             </>
             : "Wrong Network"
@@ -25,7 +25,7 @@ const ConnectWalletBtn = () => {
         </p>
       </div>
       {openMenu &&
-        <div className="flex flex-col absolute top-[calc(100%+10px)] right-0 bg-black border border-white" style={{ width: 'max-content' }}>
+        <div className="flex flex-col absolute top-[calc(100%+10px)] right-0 bg-black border border-white rounded-xl overflow-hidden" style={{ width: 'max-content' }}>
           {chains.map((x: any, i) =>
             <button className="flex items-center gap-4 transition hover:bg-grey1 px-5 py-2" key={i} onClick={() => switchChain({ chainId: x.id })}>
               <img src={`/assets/images/chains/${i + 1}.png`} width="30" height="30" />
