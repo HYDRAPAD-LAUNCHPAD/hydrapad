@@ -23,7 +23,7 @@ const BitRivals: React.FC = () => {
         <div className='items-center hidden xl:flex'>
           <div className='flex py-2 px-3 items-center justify-center w-[170px] bg-[#15131D] rounded-[64px]'>
             {/* <img src="/assets/images/bit_rials.png" alt="bit-rials" width={28.8} height={28.8} className="rounded-full" /> */}
-            <h6 className='font-bold text-greenColor'>Upcoming Presales</h6>
+            <h6 className='font-bold text-[12px] text-greenColor'>Upcoming Presales</h6>
           </div>
           <IconTrendingUp className='ml-3 mr-8 w-[30px]' />
         </div>
