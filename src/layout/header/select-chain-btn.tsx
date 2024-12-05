@@ -14,11 +14,12 @@ const ConnectWalletBtn = () => {
       onClick={() => setOpenMenu(!openMenu)}
     >
       <div className="bg-[#0A090F] h-min w-max flex gap-2 justify-between items-center px-2">
-        <p className="flex items-center gap-4 shrink-text">
+        <p className="flex items-center gap-2 shrink-text">
           {chains.some(x => x.id === chainId) ?
             <>
               <img src={`/assets/images/chains/${chains.findIndex(x => x.id === chainId) + 1}.png`} width="20" height="20" />
               <span>{chains.find(x => x.id === chainId)?.name}</span>
+              <svg className={"transition "+ (openMenu ? "rotate-180" : '')} width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </>
             : "Wrong Network"
           }
@@ -28,7 +29,7 @@ const ConnectWalletBtn = () => {
         <div className="flex flex-col absolute top-[calc(100%+10px)] right-0 bg-black border border-white rounded-xl overflow-hidden" style={{ width: 'max-content' }}>
           {chains.map((x: any, i) =>
             <button className="flex items-center gap-4 transition hover:bg-grey1 px-5 py-2" key={i} onClick={() => switchChain({ chainId: x.id })}>
-              <img src={`/assets/images/chains/${i + 1}.png`} width="30" height="30" />
+              <img src={`/assets/images/chains/${i + 1}.png`} width="20" height="20" />
               <span>{x.name} {x.id === chainId && "(Using)"}</span>
             </button>
           )}

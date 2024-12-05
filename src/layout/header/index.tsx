@@ -34,7 +34,7 @@ export default function Header() {
                             <span className={"menu-bottom-line absolute bg-white h-[1px] w-full duration-150" + (clicked ? ' top-1/2 translate-x-[-0.5px] -rotate-45' : ' top-[55%]')} />
                         </div>
                     </div>
-                    <div className="flex justify-between items-center border-l border-borderColor text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] lg-max:hidden pr-[2vw]">
+                    <div className="flex justify-between items-center border-x border-borderColor text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] lg-max:hidden pr-[2vw]">
                         <Resource />
                         {/* <div className="w-[79.5%] flex items-center justify-evenly">
                             <DAOGovernance />
@@ -43,10 +43,13 @@ export default function Header() {
                             <Dex />
                             <Socials />
                         </div> */}
+                        <SelectChainBtn />
                     </div>
                 </div>
-                <div className="flex justify-end xl:gap-10 pr-[4.3vw]">
-                    <SelectChainBtn />
+                <div className="flex justify-end xl:gap-10 pl-10 pr-10">
+                    <div className="hidden lg-max:block">
+                        <SelectChainBtn />
+                    </div>
                     <ConnectWalletBtn />
                 </div>
             </nav>
