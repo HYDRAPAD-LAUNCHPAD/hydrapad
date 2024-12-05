@@ -46,7 +46,7 @@ const Locks: React.FC = () => {
             <span>Create a Lock</span>
           </button>
           <div className="overflow-auto">
-            <table className="mt-5">
+            <table className="mt-5 w-full">
               <thead>
                 <th className="opacity-70">ASSET</th>
                 <th className="opacity-70">Contract Address</th>
