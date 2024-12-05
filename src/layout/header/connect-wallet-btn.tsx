@@ -8,17 +8,17 @@ const ConnectWalletBtn = () => {
 
   return (
     <span
-      className="inline-block p-1 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0 h-fit"
+      className="inline-block p-1 cursor-pointer relative 2xl:scale-100 xl:scale-90 scale-75 translate-x-[12.5%] lg:translate-x-0 h-fit w-full"
       onClick={() => open()}
     >
-      <div className="bg-[#0A090F] h-min w-max flex gap-2 justify-between items-center px-2">
+      <div className="bg-[#0A090F] h-min flex gap-2 justify-between items-center px-2">
         {isConnecting ? (
           <>
             <IconLoader2 className="animate-spin" />
             <p>CONNECTING ...</p>
           </>
         ) : isConnected ? (
-          <p className="overflow-hidden text-ellipsis whitespace-nowrap w-[120px]">{address}</p>
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap">{address}</p>
         ) : (
           <>
             <IconDots />

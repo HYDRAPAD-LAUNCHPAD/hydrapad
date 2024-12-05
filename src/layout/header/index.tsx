@@ -46,7 +46,7 @@ export default function Header() {
                         <SelectChainBtn />
                     </div>
                 </div>
-                <div className="flex justify-end xl:gap-10 pr-3 xl:pr-10 w-[20vw] lg:w-[17vw]">
+                <div className="flex justify-end xl:gap-10 px-3 xl:px-10 w-[20vw] lg:w-[17vw]">
                     <div className="hidden lg-max:block">
                         <SelectChainBtn />
                     </div>

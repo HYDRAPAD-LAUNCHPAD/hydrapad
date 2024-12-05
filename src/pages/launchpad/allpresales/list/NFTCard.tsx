@@ -75,7 +75,7 @@ const NFTCard: React.FC<NFTCardType> = props => {
             />
           </div>
           <div className='text-white'>
-            <p className='text-[12px]'>{props.name}</p>
+            <p className='text-[18px]'>{props.name}</p>
             <p className='text-[11.5px]'>{props.type}</p>
             {/* <p className="text-[11.5px]">Spots Left 2499990</p> */}
           </div>
