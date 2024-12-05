@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import clsx from 'clsx';
+import { Props } from '../../types'
 // import TwitterSvg from "@/components/icons/twitter-svg";
 // import TelegramSvg from "@/components/icons/Telegram-svg";
 // import DiscordSvg from "@/components/icons/Discord-svg";
@@ -23,7 +24,7 @@ const listArrTwo: listType[] = [
 ];
 
 const listArrThree: listType[] = [
-  { title: "📩 Contact Us", url: "/contact-us" },
+  // { title: "📩 Contact Us", url: "/contact-us" },
   // { title: "Doc", url: "/doc" },
   // { title: "Apply For Audit", url: "/apply-for-audit" },
   // { title: "Market Makers", url: "/market-makers" },
@@ -31,7 +32,7 @@ const listArrThree: listType[] = [
   // { title: "KOL Groups", url: "/kol-groups" },
 ]
 
-const LeftSidebar: React.FC = () => {
+const LeftSidebar: React.FC<Props> = ({ setContactVisible }) => {
   return (
     <div className="px-3 py-8 h-[calc(100vh-85px)] overflow-y-scroll flex flex-col justify-between">
       <div>
@@ -57,6 +58,9 @@ const LeftSidebar: React.FC = () => {
               <LinkText key={item.title} title={item.title} url={item.url} />
             ))
           }
+          <li className="flex items-center gap-2 my-2 p-3 font-primary text-[13px] border border-white rounded-md cursor-pointer" onClick={() => setContactVisible(true)}>
+            <span>📩 Contact Us</span>
+          </li>
         </ul>
         <img className="mt-5" src="/assets/images/hd2.jpg" alt="" />
       </div>

@@ -5,7 +5,7 @@ import LabelText from "@/components/common/LabelText";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useWriteContract } from "wagmi";
 import abi from "./ABI.json";
-import { formatEther, parseEther } from "viem";
+import { parseEther } from "viem";
 
 const lockDurationOptions: { title: string, value: string }[] = [
   { title: "3 months", value: '3m' },
@@ -20,7 +20,7 @@ interface LockTokenProps {
 }
 
 const LockToken: React.FC<LockTokenProps> = ({ setEnabled }) => {
-  const [_token, _setToken] = useState("0xFab16528423959119Fb29270efF3F7752Ed2F063");
+  const [_token, _setToken] = useState("0xEE4Aa73F6F62FC4A9eE4dB351Babb194670c931A");
   const [_amount, _setAmount] = useState("");
   const [_lockDuration, _setLockDuration] = useState("");
   const { writeContract } = useWriteContract();
