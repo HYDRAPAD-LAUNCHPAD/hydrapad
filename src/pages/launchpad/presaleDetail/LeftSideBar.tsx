@@ -20,13 +20,13 @@ const LeftSidebar: React.FC<LeftSidebarProps> = () => {
           className='w-[185px] h-[180px] my-5'
         />
         <div className='flex mb-20'>
-          <Link to='https://x.com/White_Hat_DAO' target='_blank'>
+          <Link to='https://x.com/Hydra_Pad' target='_blank'>
             <TwitterSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />
           </Link>
-          <Link to='http://t.me/whitehatdao' target='_blank'>
+          <Link to='http://t.me/hydra_pad' target='_blank'>
             <TelegramSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />
           </Link>
-          <Link to='http://discord.gg/sHbRMxev3p' target='_blank'>
+          <Link to='http://discord.gg/ESnjKeeRbE' target='_blank'>
             <RedditSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />
           </Link>
           <GlobalSvg className=' w-7 h-7 cursor-pointer hover:opacity-80 duration-150 mx-1' />

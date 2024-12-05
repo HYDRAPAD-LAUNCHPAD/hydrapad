@@ -24,9 +24,9 @@ const Headers: React.FC = () => {
               "bg-transparent border-b border-white shadow-none rounded-none text-orange-500",
           }}
         >
-          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="Token" onClick={handleNavigate("/tokens")}>Token</Tab>
-          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="My Investments" onClick={handleNavigate("/my-investments")}>My Investments</Tab>
-          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500" value="History" onClick={handleNavigate("/history")}>History</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500 whitespace-nowrap" value="Token" onClick={handleNavigate("/tokens")}>Token</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500 whitespace-nowrap" value="My Investments" onClick={handleNavigate("/my-investments")}>My Investments</Tab>
+          <Tab placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} activeClassName="active-orange" className="pb-2 text-gray-500 whitespace-nowrap" value="History" onClick={handleNavigate("/history")}>History</Tab>
         </TabsHeader>
       </Tabs>
       <h5 className="hidden md:block">All Networks</h5>

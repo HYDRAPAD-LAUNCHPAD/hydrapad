@@ -33,13 +33,17 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isRegular }) => {
           <p className='text-gray-600'>PRICE</p>
           <p>0.0 1012 vETH</p>
         </BorderBox>
-        <div className='bg-darkPurple flex justify-between pl-5 pr-10 rounded-lg py-2 mb-1'>
-          <span>0</span>
-          <span>vETH</span>
-        </div>
-        <div className='flex justify-center'>
-          <IconArrowsUpDown color='green' className='cursor-pointer hover:opacity-75' />
-        </div>
+        {isRegular === "0" &&
+          <>
+            <div className='bg-darkPurple flex justify-between pl-5 pr-10 rounded-lg py-2 mb-1'>
+              <span>0</span>
+              <span>vETH</span>
+            </div>
+            <div className='flex justify-center'>
+              <IconArrowsUpDown color='green' className='cursor-pointer hover:opacity-75' />
+            </div>
+          </>
+        }
         <div className='bg-darkPurple flex justify-between pl-5 pr-10 rounded-lg py-2 mb-4 mt-1'>
           <span>0</span>
           <span>APE</span>

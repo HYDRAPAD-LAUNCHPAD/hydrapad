@@ -75,7 +75,7 @@ export default function Join() {
                                         <p className="text-wrap">#WHD #WhiteHatDAO $WHDT #Web3 #safety</p>
                                     </div>
                                 </div>
-                                <Link to='https://x.com/White_Hat_DAO' className="block text-wrap border border-borderColorThick text-center p-3">
+                                <Link to='https://x.com/Hydra_Pad' className="block text-wrap border border-borderColorThick text-center p-3">
                                     Follow us on Twitter for more updates
                                 </Link>
                             </div>
@@ -108,7 +108,7 @@ export default function Join() {
                                         />
                                     </div>
                                 </div>
-                                <Link to='https://x.com/White_Hat_DAO' className="block text-wrap border border-borderColorThick text-center p-3">
+                                <Link to='https://x.com/Hydra_Pad' className="block text-wrap border border-borderColorThick text-center p-3">
                                     Follow us on Twitter for more updates
                                 </Link>
                             </div>
@@ -119,14 +119,14 @@ export default function Join() {
                     <div className="flex flex-wrap relative">
                         <div className="w-[45.7vw] lg:w-[33vw] px-8 border-b border-borderColor py-24">
                             <p className="opacity-60 mb-4">JOIN OUR</p>
-                            <Link to='https://x.com/White_Hat_DAO' target="_blank" className="text-3xl flex items-center hover:opacity-60 duration-200">
+                            <Link to='https://x.com/Hydra_Pad' target="_blank" className="text-3xl flex items-center hover:opacity-60 duration-200">
 
                                 <IconBrandTwitter className="w-10 h-10" />
                             </Link>
                         </div>
                         <div className="w-[45.7vw] lg:w-[33vw] px-8 border-b border-borderColor py-24 text-right">
                             <p className="opacity-60 mb-4">HOP INTO</p>
-                            <Link to='http://discord.gg/sHbRMxev3p' target="_blank" className="text-3xl flex items-center justify-end hover:opacity-60 duration-200">
+                            <Link to='http://discord.gg/ESnjKeeRbE' target="_blank" className="text-3xl flex items-center justify-end hover:opacity-60 duration-200">
                                 <IconBrandDiscord className="w-10 h-10" />
                             </Link>
                         </div>
@@ -138,7 +138,7 @@ export default function Join() {
                         </div>
                         <div className="w-[45.7vw] lg:w-[33vw] px-8 py-24 text-right">
                             <p className="opacity-60 mb-4">HOP INTO</p>
-                            <Link to='http://t.me/whitehatdao' target="_blank" className="text-3xl flex items-center justify-end hover:opacity-60 duration-200">
+                            <Link to='http://t.me/hydra_pad' target="_blank" className="text-3xl flex items-center justify-end hover:opacity-60 duration-200">
                                 <IconBrandTelegram className="w-10 h-10" />
                             </Link>
                         </div>

@@ -25,7 +25,7 @@ export default function MobileView(props: PropsType) {
                     <img src="https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/64491fa5649dfb767a0c35ee_arrow-down.svg" loading="lazy" alt="" className="mr-4 group-hover/item:rotate-180 w-2" />
                 </div>
                 <div className="flex-wrap hidden group-hover/whole:flex">
-                    <Link rel="noopener noreferrer" to="/" className="inline-block mr-2 p-2 cst-link-item-bg mb-3 opacity-60 hover:opacity-100 duration-150" >
+                    <Link rel="noopener noreferrer" to="#" className="inline-block mr-2 p-2 cst-link-item-bg mb-3 opacity-60 hover:opacity-100 duration-150" >
                         <div className="flex items-center justify-between mb-2">
                             <div className="flex items-center mr-3">
                                 <img src="/assets/images/HYD.png" alt="" className="mr-1" width={32} height={32} />
@@ -189,21 +189,21 @@ export default function MobileView(props: PropsType) {
                         <div className="w-max p-4 opacity-opacity1">
                             JOIN THE COMMUNITY
                         </div>
-                        <Link to="https://x.com/White_Hat_DAO" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
+                        <Link to="https://x.com/Hydra_Pad" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
                             <div className="flex items-center gap-4 mr-14 w-max">
                                 <IconBrandTwitter className="w-8 h-8" />
                                 <p className="text-white">Twitter</p>
                             </div>
                             <img src="https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/64491f577f22d780663c25d1_ico-arrow.svg" className="w-3 h-3" alt="" />
                         </Link>
-                        <Link to="http://discord.gg/sHbRMxev3p" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
+                        <Link to="http://discord.gg/ESnjKeeRbE" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
                             <div className="flex items-center gap-4 mr-14 w-max">
                                 <IconBrandDiscord className="w-8 h-8" />
                                 <p className="text-white">Discord</p>
                             </div>
                             <img src="https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/64491f577f22d780663c25d1_ico-arrow.svg" className="w-3 h-3" alt="" />
                         </Link>
-                        <Link to="http://t.me/whitehatdao" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
+                        <Link to="http://t.me/hydra_pad" target="_blank" className="px-5 py-3 border-t border-borderColor flex justify-between items-center hover:opacity-70 duration-200">
                             <div className="flex items-center gap-4 mr-14 w-max">
                                 <IconBrandTelegram className="w-8 h-8" />
                                 <p className="text-white">Telegram</p>

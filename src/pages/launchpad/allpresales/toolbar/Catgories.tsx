@@ -10,7 +10,7 @@ interface optionsType {
 
 const options: optionsType[] = [
   { icon: <IconApps className="mr-2 w-[18px]" />, title: "All Presales", value: "all_presales" },
-  { icon: <IconApps className="mr-2 w-[18px]" />, title: "My Contributions", value: "my_contributions" },
+  // { icon: <IconApps className="mr-2 w-[18px]" />, title: "My Contributions", value: "my_contributions" },
   { icon: <IconHeartFilled className="mr-2 w-[18px]" />, title: "Favorites", value: "favorites" }
 ]
 

@@ -5,7 +5,7 @@ import ContactForm from '../../components/common/ContactForm'
 export default function Resource() {
     const [contactVisible, setContactVisible] = useState(false);
     return (
-        <div className="relative w-[20.5%] group/whole">
+        <div className="relative w-[200px] group/whole">
             <div className="py-8 border-r border-borderColor relative flex items-center justify-center group/item cursor-pointer">
                 <div className="w-3 h-3 mr-3 relative group-hover/item:rotate-45 group-hover/item:scale-[1.667] duration-200">
                     <div className="w-1 h-1 bg-white rounded-full absolute top-0 left-0 group-hover/item:scale-[0.6] duration-200" />
@@ -28,7 +28,7 @@ export default function Resource() {
                         <img src="https://cdn.prod.website-files.com/64354b8ce4872ad8cd1c7b04/645e3d7ca7fd751544d4e7e8_icon-link-arrow-simple.svg" loading="lazy" alt="Simple Link Arrow Icon" className="w-3" />
                     </div>
                 </a>
-                <span className="inline-block w-full p-2 cst-link-item-bg mb-3 duration-150 cursor-pointer" onClick={() => setContactVisible(true)}>
+                <span className="inline-block w-full p-2 cst-link-item-bg mb-3 duration-150 cursor-pointer">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center mr-3">
                             <img src="/assets/images/HYD.png" alt="" className="mr-2" width={28} height={28} />

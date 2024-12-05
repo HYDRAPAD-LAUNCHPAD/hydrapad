@@ -7,8 +7,13 @@ import {
 } from '@tabler/icons-react'
 import ContainerBig from '../container-big'
 import { Link } from 'react-router-dom'
+import { Dialog } from '@material-tailwind/react'
+import { useState } from 'react'
+import MessageBox from '@/components/common/MessageBox'
 
 export default function Footer () {
+  const [emailContent, setEmailContent] = useState("");
+  const [contactVisible, setContactVisible] = useState(false);
   return (
     <div className='bg-bgColor relative z-[99]'>
       <div className='w-full lg:w-[93.2vw] mx-auto h-[1.2vw] border-t border-borderColor relative'>
@@ -20,13 +25,13 @@ export default function Footer () {
           <div className='w-[14.8vw] lg:pl-[4vw]'>
             <img src='/assets/images/HYD.png' alt='' className='w-14' />
             <div className='flex items-center gap-3 mt-14'>
-            <Link to='https://x.com/White_Hat_DAO' target='_blank'>
+            <Link to='https://x.com/Hydra_Pad' target='_blank'>
               <IconBrandTwitter className='opacity-60 hover:opacity-100 cursor-pointer duration-200 w-[30px] h-[30px]' />
             </Link>
-            <Link to='http://discord.gg/sHbRMxev3p' target='_blank'>
+            <Link to='http://discord.gg/ESnjKeeRbE' target='_blank'>
               <IconBrandDiscord className='opacity-60 hover:opacity-100 cursor-pointer duration-200 w-[30px] h-[30px]' />
             </Link>
-            <Link to='http://t.me/whitehatdao' target='_blank'>
+            <Link to='http://t.me/hydra_pad' target='_blank'>
               <IconBrandTelegram className='opacity-60 hover:opacity-100 cursor-pointer duration-200 w-[30px] h-[30px]' />
             </Link>
             </div>
@@ -42,8 +47,13 @@ export default function Footer () {
                 type='text'
                 className='border-0 p-0 m-0 outline-none w-[calc(100%-160px)] bg-transparent'
                 placeholder='Powered by WHD'
+                value={emailContent}
+                onChange={e => setEmailContent(e.target.value)}
               />
-              <span className='py-1 px-10 text-white text-lg relative cursor-pointer hover:text-opacity-60 duration-200 w-max'>
+              <span className='py-1 px-10 text-white text-lg relative cursor-pointer hover:text-opacity-60 duration-200 w-max' onClick={() => {
+                if(emailContent?.length>0)
+                  setContactVisible(true)
+              }}>
                 Email Us
                 <span className='absolute -top-1 left-1 w-full h-[1px] bg-borderColor' />
                 <span className='absolute bottom-1 -right-1 w-[1px] h-full bg-borderColor' />
@@ -67,6 +77,9 @@ export default function Footer () {
           © 2025 ALL RIGHTS RESERVED BY HYDRAPAD.COM
         </p>
       </ContainerBig>
+      <Dialog open={contactVisible} handler={setContactVisible} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <MessageBox setContactVisible={setContactVisible} />
+      </Dialog>
     </div>
   )
 }

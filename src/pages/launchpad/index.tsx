@@ -7,7 +7,7 @@ import LeftDrawer from './LeftDrawer'
 import RightDrawer from './RightDrawer'
 import Footer from '@/components/home/footer'
 import { Dialog } from '@material-tailwind/react'
-import ContactForm from '../../components/common/ContactForm'
+import ContactForm from '@/components/common/ContactForm'
 import { useState } from 'react'
 
 const LaunchPad: React.FC = () => {

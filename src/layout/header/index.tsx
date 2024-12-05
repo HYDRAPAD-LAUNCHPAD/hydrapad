@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import ConnectWalletBtn from "./connect-wallet-btn"
+import SelectChainBtn from "./select-chain-btn"
 import MobileView from "./mobile-view"
 import { useEffect, useState } from "react"
 import Resource from "./resource"
@@ -26,14 +27,14 @@ export default function Header() {
                         <h4 className="ml-4 hidden md:block lg-max:text-2xl">HYDRA</h4>
                     </Link>
                 </div>
-                <div className="w-[60vw] lg:w-[66vw]">
+                <div className="flex-1">
                     <div className="lg-max:block hidden">
                         <div className="ml-4 w-[24px] h-20 cursor-pointer relative" onClick={() => setClicked(!clicked)}>
                             <span className={"menu-top-line absolute bg-white h-[1px] w-full duration-150" + (clicked ? ' top-1/2 translate-x-[-0.5px] rotate-45' : ' top-[45%]')} />
                             <span className={"menu-bottom-line absolute bg-white h-[1px] w-full duration-150" + (clicked ? ' top-1/2 translate-x-[-0.5px] -rotate-45' : ' top-[55%]')} />
                         </div>
                     </div>
-                    <div className="flex items-center border-x border-borderColor text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] lg-max:hidden">
+                    <div className="flex justify-between items-center border-l border-borderColor text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] lg-max:hidden pr-[2vw]">
                         <Resource />
                         {/* <div className="w-[79.5%] flex items-center justify-evenly">
                             <DAOGovernance />
@@ -44,7 +45,8 @@ export default function Header() {
                         </div> */}
                     </div>
                 </div>
-                <div className="w-[20vw] lg:w-[17vw] flex justify-end pr-[4.3vw] lg:pr-[2.2vw]">
+                <div className="flex justify-end xl:gap-10 pr-[4.3vw]">
+                    <SelectChainBtn />
                     <ConnectWalletBtn />
                 </div>
             </nav>

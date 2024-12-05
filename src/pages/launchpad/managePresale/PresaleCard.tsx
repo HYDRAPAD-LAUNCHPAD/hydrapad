@@ -1,4 +1,4 @@
-import DownloadSvg from '@/components/icons/Download-svg'
+// import DownloadSvg from '@/components/icons/Download-svg'
 import SettingSvg from '@/components/icons/Setting-svg'
 import clsx from 'clsx'
 import { useNavigate } from 'react-router'
@@ -58,17 +58,17 @@ const PresaleCard: React.FC<PresaleCardType> = props => {
         </div>
       </div>
       <div className='lg:flex justify-between flex-wrap gap-1 -mx-1'>
-        <button className='text-[13px] flex w-full lg:w-auto justify-center items-center bg-bgColor rounded-md -mr-1 cursor-pointer' onClick={handleClickManage} style={{padding: "4px 5px"}}>
-          <SettingSvg />
-          <span className='ml-1'>Manage Presale</span>
+        <button className='text-[13px] flex w-full lg:w-auto justify-center items-center bg-bgColor rounded-md cursor-pointer px-5 py-2 gap-2' onClick={handleClickManage}>
+          <SettingSvg width={17} height={17} />
+          <span className='ml-1 text-[13px]'>Manage Presale</span>
         </button>
         {/* <GradientButton className="text-[13px] rounded-md py-0" style={{padding: "4px 5px"}} onClick={handleClickTrade}>Trade Live on Dex</GradientButton> */}
-        <button
+        {/* <button
           className='text-[13px] w-full lg:w-auto justify-center mt-3 lg:mt-0 rounded-md font-primary bg-purple-900 text-white flex items-center'
           style={{ padding: '4px 5px' }}
         >
           <DownloadSvg className='mr-2 mt-[1px]' /> Investor CSV File
-        </button>
+        </button> */}
       </div>
     </div>
   )
