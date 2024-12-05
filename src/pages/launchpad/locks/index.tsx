@@ -28,7 +28,7 @@ const Locks: React.FC = () => {
       {!enabled ?
         <div className="py-10 px-5 flex flex-col gap-10">
           <div className="flex justify-between items-center">
-            <span className="py-1 px-10 bg-orange border-b border-white">Locks</span>
+            <span className="py-1 px-10 bg-orange border-b border-white active-orange">Locks</span>
             <span>All Networks</span>
           </div>
           <div className="flex justify-between items-center">
