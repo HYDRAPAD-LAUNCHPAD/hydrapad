@@ -16,7 +16,7 @@ const LaunchPad: React.FC = () => {
     <>
       <div className="relative">
         <div className='flex 2xl:h-[calc(100vh-88px)] xl:h-[calc(100vh-84px)] h-[calc(100vh-80px)] justify-between'>
-          <LeftDrawer />
+          <LeftDrawer setContactVisible={setContactVisible} />
           <div className='border-borderColor border-r hidden xl:block w-[20vw] lg:w-[17vw]'>
             <LeftSidebar contactVisible={contactVisible} setContactVisible={setContactVisible} />
           </div>

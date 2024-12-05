@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Dialog } from '@material-tailwind/react'
 import ContactForm from '../../components/common/ContactForm'
-import { Link } from "react-router-dom";
 
 export default function Resource() {
     const [contactVisible, setContactVisible] = useState(false);

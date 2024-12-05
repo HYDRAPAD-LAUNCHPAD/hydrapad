@@ -2,8 +2,9 @@ import { Drawer } from '@material-tailwind/react'
 import { IconArrowRight } from '@tabler/icons-react'
 import React, { useState } from 'react'
 import LeftSidebar from './LeftSidebar'
+import { Props } from '@/types'
 
-const LeftDrawer:React.FC = () => {
+const LeftDrawer:React.FC<Props> = ({ setContactVisible }) => {
   const [open, setOpen] = useState<boolean>(false)
 
   const handleOpen = () => {
@@ -16,7 +17,7 @@ const LeftDrawer:React.FC = () => {
         <IconArrowRight />
       </button>
       <Drawer open={open} onClose={handleOpen} className='bg-bgColor' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        <LeftSidebar />
+        <LeftSidebar setContactVisible={setContactVisible} />
       </Drawer>
     </div>
   )

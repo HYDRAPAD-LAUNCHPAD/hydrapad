@@ -5,8 +5,8 @@ import LabelText from "@/components/common/LabelText";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useWriteContract } from "wagmi";
 import abi from "./ABI.json";
-import ERC20Abi from "./ERC20.json";
-import { Address, parseEther } from "viem";
+// import ERC20Abi from "./ERC20.json";
+import { parseEther } from "viem";
 
 const lockDurationOptions: { title: string, value: string }[] = [
   { title: "3 months", value: '3m' },

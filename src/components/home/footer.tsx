@@ -7,10 +7,8 @@ import {
 } from '@tabler/icons-react'
 import ContainerBig from '../container-big'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 
 export default function Footer () {
-  const [contactVisible, setContactVisible] = useState<boolean>(false)
   return (
     <div className='bg-bgColor relative z-[99]'>
       <div className='w-full lg:w-[93.2vw] mx-auto h-[1.2vw] border-t border-borderColor relative'>
