@@ -75,7 +75,7 @@ const Locks: React.FC = () => {
                   <td>
                     <div className="flex justify-center gap-2">
                       <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
-                      <img src="/assets/icons/external.svg" />
+                      <a className="w-5" href="https://sepolia.etherscan.io/address/0x2459440684581EE4EC6B20D4D5C3d58795EA757F" target="_blank"><img src="/assets/icons/external.svg" width="20" height="20" /></a>
                     </div>
                   </td>
                   <td align="center">10/11/2024</td>
@@ -83,7 +83,7 @@ const Locks: React.FC = () => {
                   <td align="center">
                     <div className="flex justify-center gap-2">
                       <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
-                      <img src="/assets/icons/external.svg" />
+                      <a className="w-5" href="https://sepolia.etherscan.io/address/0x2459440684581EE4EC6B20D4D5C3d58795EA757F" target="_blank"><img src="/assets/icons/external.svg" width="20" height="20" /></a>
                     </div>
                   </td>
                   <td>
@@ -109,7 +109,7 @@ const Locks: React.FC = () => {
                   <td>
                     <div className="flex justify-center gap-2">
                       <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
-                      <img src="/assets/icons/external.svg" />
+                      <a href="https://sepolia.etherscan.io/address/0x2459440684581EE4EC6B20D4D5C3d58795EA757F" target="_blank"><img src="/assets/icons/external.svg" /></a>
                     </div>
                   </td>
                   <td align="center">10/11/2024</td>
@@ -117,7 +117,7 @@ const Locks: React.FC = () => {
                   <td align="center">
                     <div className="flex justify-center gap-2">
                       <span className="px-2 bg-grey3 rounded-md max-w-[150px] truncate">0x2459440684581EE4EC6B20D4D5C3d58795EA757F</span>
-                      <img src="/assets/icons/external.svg" />
+                      <a href="https://sepolia.etherscan.io/address/0xEE4Aa73F6F62FC4A9eE4dB351Babb194670c931A" target="_blank"><img src="/assets/icons/external.svg" /></a>
                     </div>
                   </td>
                   <td>
